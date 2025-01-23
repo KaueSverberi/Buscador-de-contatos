@@ -12,10 +12,12 @@ const contatos = [
 function procurar(){
     
     for( let i = 0; i < contatos.length; i++){
-        if(input.value === contatos[i].name){
+        if(input.value.toLowerCase() === contatos[i].name.toLowerCase()){
             p.innerHTML = `Nome: ${contatos[i].name} / Número: ${contatos[i].number}`
 
             break
+        }else {
+            p.innerHTML = "Contato não encontrado"
         }
     }
 }
